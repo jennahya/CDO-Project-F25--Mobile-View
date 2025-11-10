@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+  <div id="top"></div>
   <header>
     <a href="#main-content">Skip to Main Content</a>
     <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
@@ -18,6 +18,11 @@
         <li><a href="resume.html">Resumes</a></li>
         <li><a href="networking.html">Networking</a></li>
         <li><a href="portfolios.html" aria-current="page">Portfolios</a></li>
+        <li class="nav-search">
+          <form role="search">
+            <label class="sr-only" for="site-search"></label>
+            <input id="site-search" type="search" placeholder="Search…" />
+          </form>
       </ul>
     </nav>
     <h1>Portfolios</h1>
@@ -135,23 +140,22 @@
 
     <section>
       <h2>Top portfolio resources</h2>
-      <ul class="grid-auto">
+      <ul>
         <li><a href="https://docs.google.com/document/d/1L8Sc0ezVVCvP9SdUDwr0hwrNAd3us0JBbmUpoCYN-rs/edit?tab=t.0">UX Portfolio Guide and Rubric (2025–2026)</a></li>
         <li><a href="https://docs.google.com/document/d/1xw46Cm9DzC2wVQFxr_Ct96kbddhAhchzqUJpJJTSESc/edit?usp=sharing">UMSI CDO’s Portfolio Rubric</a></li>
       </ul>
     </section>
 
-    <div>
-        <img src="images/UMSI_teamwork.jpg" alt="Students collaborating on a project">
-    </div>
-
   </main>
-
+  <a href="#top" id="backToTop" aria-label="Back to top">↑</a>
   <!-- Content taken & modified from CDO Canvas Site resources under Portfolio module -->
 
   <footer>
     <p>UMSI Career Development Office • <a href="mailto:umsi.careers@umich.edu">umsi.careers@umich.edu</a></p>
+    <p><span id="year">2025</span> • University of Michigan School of Information</p>
   </footer>
-
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
